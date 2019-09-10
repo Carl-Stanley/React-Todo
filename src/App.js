@@ -1,35 +1,97 @@
-import React from 'react';
+import React, {Component} from 'react';
+import TodoList from './components/TodoComponents/TodoList';
+import './components/TodoComponents/Todo.css';
+import TodoForm from './components/TodoComponents/TodoForm';
 
-const TheList = [
+
+const taskList = [
   {
-    task: 'Organize Garage',
+    task: 'O-Ren Ishii',
     id: 1528817077286,
-    completed: false
+    complete: false
   },
   {
-    task: 'Bake Cookies',
+    task: 'Bill',
     id: 1528817084358,
-    completed: false
+    complete: false
+  },
+  {
+    task: 'Vernita Green',
+    id: 1528817111786,
+    complete: false
   }
-];
+]
 
-class App extends React.Component {
-  constructor () {
+export default class App extends Component {
+  constructor() {
     super()
+    
     this.state = {
-
-      TheList
-
+    
+      taskList
+   
     }
+  
   }
   
+  clear = event => {
+     
+    this.setState({
+
+      taskList: this.state.taskList.filter(item => !item.complete)
+    
+    })
+  }
+  
+
+  toggleList = itemId => {
+    this.setState({
+      taskList: this.state.taskList.map(item => {
+        if (item.id === itemId) {
+          return { ...item, complete: !item.complete }
+        }
+       
+        return item
+      })
+    })
+  }
+
+  addtoList = (event, itemName) => {
+     
+    const existing = this.state.taskList.filter(item => item.name === itemName)
+    if (existing.length === 0) {
+      const newItem = {
+        task: itemName,
+        id: Date.now(),
+        complete: false
+      }
+      this.setState({
+        taskList: [...this.state.taskList, newItem]
+      })
+    }
+  }
+
   render() {
+    
     return (
-      <div>
-        <h2>Welcome to your Todo App!</h2>
+      
+      <div className='App'>
+        
+        <h1>The To Do List</h1>
+        
+        <TodoForm addItem={this.addtoList} />
+        
+        <TodoList
+         
+        toggleList={this.toggleList}
+
+        taskList={this.state.taskList}       
+               
+        clearList={this.clear}
+        
+        />
+      
       </div>
-    );
+    )
   }
 }
-
-export default App;
