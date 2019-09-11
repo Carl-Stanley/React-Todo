@@ -46,7 +46,7 @@ class TodoForm extends Component {
           
           name='item'
           
-          placeholder='HIT Enter'
+          placeholder='Add a Task'
 
           
         />

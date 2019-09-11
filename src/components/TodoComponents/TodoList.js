@@ -13,12 +13,18 @@ const TodoList = props => {
         Clear Finished Tasks
       
       </button>
+
+      <button className='Submit-btn'>
+        
+       Submit New Tasks
+      
+      </button>
       
       <div className='to-do-list'>
         
         {props.taskList.map(item => (
         
-        <Todo key={item.id} item={item} toggleList={props.toggleItem} />
+        <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
         
         ))}
       

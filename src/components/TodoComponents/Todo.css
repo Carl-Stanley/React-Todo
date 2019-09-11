@@ -71,10 +71,22 @@ form {
     padding: 3px 0;
     font-size: 1rem;
     width: 400px;
-    outline: 0;
-    background: transparent;
     margin: 25px auto;
 }
+
+.Submit-btn {
+     
+    background: whitesmoke;
+    color: rgb(24, 23, 23);
+    margin: 10px;
+    width: 180px;
+    height: 35px;
+    text-align: center;
+    border-radius: 10px;
+    border: black dashed .5px; 
+
+}
+
 
 .clear-btn {
      
@@ -82,7 +94,7 @@ form {
     color: rgb(24, 23, 23);
     margin: 10px;
     width: 180px;
-    height: 60px;
+    height: 35px;
     text-align: center;
     border-radius: 10px;
     border: black dashed .5px; 

@@ -44,7 +44,7 @@ export default class App extends Component {
   }
   
 
-  toggleList = itemId => {
+  toggle = itemId => {
     this.setState({
       taskList: this.state.taskList.map(item => {
         if (item.id === itemId) {
@@ -83,7 +83,7 @@ export default class App extends Component {
         
         <TodoList
          
-        toggleList={this.toggleList}
+        toggle={this.toggle}
 
         taskList={this.state.taskList}       
                
