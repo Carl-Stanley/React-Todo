@@ -59,12 +59,19 @@ export default class App extends Component {
   addtoList = (event, itemName) => {
      
     const existing = this.state.taskList.filter(item => item.name === itemName)
+
     if (existing.length === 0) {
+      
       const newItem = {
+    
         task: itemName,
+    
         id: Date.now(),
+    
         complete: false
+    
       }
+    
       this.setState({
         taskList: [...this.state.taskList, newItem]
       })
@@ -79,10 +86,12 @@ export default class App extends Component {
         
         <h1>The To Do List</h1>
         
-        <TodoForm addItem={this.addtoList} />
+        <TodoForm  />
         
         <TodoList
-         
+
+        addtoList={this.addtoList} 
+
         toggleItem={this.toggleItem}
 
         taskList={this.state.taskList}       

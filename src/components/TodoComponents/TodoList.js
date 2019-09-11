@@ -14,7 +14,7 @@ const TodoList = props => {
       
       </button>
 
-      <button className='Submit-btn' onClick={props.addItem}>
+      <button className='Submit-btn' onClick={props.addtoList}>
         
        Submit New Tasks
       
