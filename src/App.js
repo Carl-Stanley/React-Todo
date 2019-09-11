@@ -45,7 +45,7 @@ export default class App extends Component {
   }
   
   clear = event => {
-     
+    event.preventDefault()  
     this.setState({
 
       taskList: this.state.taskList.filter(item => !item.complete)
@@ -67,7 +67,7 @@ export default class App extends Component {
   }
 
   addtoList = (event, itemName) => {
-     
+    event.preventDefault() 
     const existing = this.state.taskList.filter(item => item.name === itemName)
 
     if (existing.length === 0) {
