@@ -68,9 +68,10 @@ export default class App extends Component {
 
   addtoList = (event, itemName) => {
     event.preventDefault() 
+    
     const existing = this.state.taskList.filter(item => item.name === itemName)
 
-    if (existing.length === 0) {
+    if (existing.length > 0) {
       
       const newItem = {
     
