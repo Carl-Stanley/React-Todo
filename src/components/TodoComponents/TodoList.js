@@ -24,7 +24,7 @@ const TodoList = props => {
         
         {props.taskList.map(item => (
         
-        <Todo key={item.id} item={item} toggleItem={props.toggleItem} />
+        <Todo key={item.id} item={item} toggleItem={props.toggleItem} itemName={props.itemName} />
         
         ))}
       

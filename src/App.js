@@ -66,7 +66,8 @@ export default class App extends Component {
     })
   }
 
-  addtoList = (event, itemName) => {
+  addtoList = (event,itemName) => {
+    
     event.preventDefault() 
     
     const existing = this.state.taskList.filter(item => item.name === itemName)
@@ -74,6 +75,8 @@ export default class App extends Component {
     console.log(existing);
     
     console.log(itemName); 
+
+    console.log(event);
 
     if (existing.length > 0) {
       

@@ -47,7 +47,8 @@ class TodoForm extends Component {
           name='item'
           
           placeholder='Add a Task'
-
+          
+          onSubmit={this.handleSubmit}
           
         />
       </form>
