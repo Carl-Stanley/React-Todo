@@ -7,7 +7,7 @@ const TodoList = props => {
   
     return (
     <>
-      
+      <div>
       <button className='clear-btn' onClick={props.clearList}>
         
         Clear Finished Tasks
@@ -19,7 +19,7 @@ const TodoList = props => {
        Submit New Tasks
       
       </button>
-      
+      </div>
       <div className='to-do-list'>
         
         {props.taskList.map(item => (
