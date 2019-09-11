@@ -93,7 +93,7 @@ export default class App extends Component {
     return (
       
       <div className='App'>
-        
+         <img src="https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" width="auto" height="300px" alt="#"></img>
         <h1>Death List Five</h1>
         
         <TodoForm  />
@@ -110,7 +110,7 @@ export default class App extends Component {
         
         />
       
-      <img src="https://m.media-amazon.com/images/M/MV5BNzM3NDFhYTAtYmU5Mi00NGRmLTljYjgtMDkyODQ4MjNkMGY2XkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_.jpg" width="auto" height="300px" alt="#"></img>
+     
 
       </div>
     )
