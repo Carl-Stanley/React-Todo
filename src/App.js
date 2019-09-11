@@ -106,7 +106,7 @@ export default class App extends Component {
       <div className='App'>
         
          <div>
-         <img src="https://vignette.wikia.nocookie.net/killbill/images/7/7e/Death_List_Five.png/revision/latest?cb=20100927143042" alt="#"></img> 
+         <h4>To Do List</h4>
          </div>
         <TodoForm  />
         
