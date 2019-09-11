@@ -11,8 +11,8 @@ const taskList = [
     complete: false
   },
   {
-    task: 'Elle Driver',
-    id: 1528817084348,
+    task: 'Vernita Green',
+    id: 1528817111786,
     complete: false
   },
   {
@@ -21,15 +21,15 @@ const taskList = [
     complete: false
   },
   {
-    task: 'Vernita Green',
-    id: 1528817111786,
+    task: 'Elle Driver',
+    id: 1528817084348,
     complete: false
-  },
+  },  
   {
-    task: 'Kill Bill',
+    task: 'Bill',
     id: 15288170845358,
     complete: false
-  },
+  }
 ]
 
 export default class App extends Component {
