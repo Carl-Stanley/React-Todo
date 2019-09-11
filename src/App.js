@@ -71,20 +71,27 @@ export default class App extends Component {
     
     const existing = this.state.taskList.filter(item => item.name === itemName)
 
+    console.log(existing);
+    
+    console.log(itemName); 
+
     if (existing.length > 0) {
       
       const newItem = {
     
-        task: itemName,
+        task: 'Test',//itemName,
     
         id: Date.now(),
     
         complete: false
     
-      }
-    
+      } 
+
+      console.log(newItem);
+
       this.setState({
         taskList: [...this.state.taskList, newItem]
+        
       })
     }
   }
